@@ -1,0 +1,10 @@
+/* components/Galeria/WorkCard.module.css */
+.gallery {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.group:hover .gallery {
+  max-height: 100px; /* Ajuste conforme necessário */
+}
