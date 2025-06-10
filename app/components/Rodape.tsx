@@ -70,7 +70,7 @@ export function Rodape() {
             <h4 className="text-lg font-semibold mb-4">Contato</h4>
             <address className="not-italic text-gray-400 space-y-2">
               <p>contato@fotografa.com</p>
-              <p>(XX) XXXX-XXXX</p>
+              <p>(71) 9 8149-1950</p>
             </address>
           </div>
 

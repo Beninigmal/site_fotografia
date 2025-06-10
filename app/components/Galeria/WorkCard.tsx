@@ -13,13 +13,12 @@ type WorkCardProps = {
   category: string;
   thumbnail: string;
   images?: {
-    // Novo campo opcional
     url: string;
     alt: string;
   }[];
   slug: string;
   index: number;
-  showGallery?: boolean; // Novo prop para controlar a exibição
+  showGallery?: boolean;
 };
 const cardVariants = {
   hidden: { opacity: 0, y: 20 },
@@ -93,7 +92,7 @@ export function WorkCard({
       )}
 
       <Link
-        href={`/portfolio/${slug}`}
+        href={`/trabalhos/${slug}`}
         className="absolute inset-0 z-10"
         aria-label={`Ver ${title}`}
       />

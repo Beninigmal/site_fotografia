@@ -24,7 +24,6 @@ export async function getCampanhaAtiva(): Promise<Campanha | null> {
     if (!data || data.length === 0) return null;
 
     const campanha = data[0];
-    console.log("Dados completos:", JSON.stringify(campanha, null, 2)); // Para debug
 
     // Transformação correta da imagem
     const imagem = campanha.imagem?.[0]?.url

@@ -62,25 +62,20 @@ export function PortfolioCarousel({ items }: { items: PortfolioItem[] }) {
         }
       `}</style>
       <Slider {...settings}>
-        {items.map(
-          (item, index) => (
-            console.log("Slider", item.images),
-            (
-              <div key={item.id} className="px-2">
-                <WorkCard
-                  id={item.id}
-                  title={item.title}
-                  category={item.category}
-                  thumbnail={item.thumbnail.url}
-                  images={item.images} // Passe todas as imagens
-                  slug={item.slug}
-                  index={index}
-                  showGallery={true} // Ativa a exibição da galeria
-                />
-              </div>
-            )
-          )
-        )}
+        {items.map((item, index) => (
+          <div key={item.id} className="px-2">
+            <WorkCard
+              id={item.id}
+              title={item.title}
+              category={item.category}
+              thumbnail={item.thumbnail.url}
+              images={item.images} // Passe todas as imagens
+              slug={item.slug}
+              index={index}
+              showGallery={true} // Ativa a exibição da galeria
+            />
+          </div>
+        ))}
       </Slider>
     </div>
   );

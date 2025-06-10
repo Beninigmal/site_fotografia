@@ -8,29 +8,24 @@ export async function getPortfolioItems(): Promise<PortfolioItem[]> {
 
   if (!data.data) return [];
 
-  return data.data.map(
-    (item: any) => (
-      console.log("Dados portfolio", item),
-      {
-        id: item.id,
-        title: item.title,
-        slug: item.slug,
-        description: item.description,
-        category: item.category || "Sem categoria",
-        thumbnail: {
-          url: `${API_BASE_URL}${item.thumbnail?.url}` || "",
-          alt: item.thumbnail?.alternativeText || "",
-        },
-        images:
-          item.images?.map((img: any) => ({
-            url: img.url,
-            alt: img.alternativeText || "",
-          })) || [],
-        client: item.client,
-        date: item.date,
-        location: item.location,
-        equipment: item.equipment,
-      }
-    )
-  );
+  return data.data.map((item: any) => ({
+    id: item.id,
+    title: item.title,
+    slug: item.slug,
+    description: item.description,
+    category: item.category || "Sem categoria",
+    thumbnail: {
+      url: `${API_BASE_URL}${item.thumbnail?.url}` || "",
+      alt: item.thumbnail?.alternativeText || "",
+    },
+    images:
+      item.images?.map((img: any) => ({
+        url: img.url,
+        alt: img.alternativeText || "",
+      })) || [],
+    client: item.client,
+    date: item.date,
+    location: item.location,
+    equipment: item.equipment,
+  }));
 }
