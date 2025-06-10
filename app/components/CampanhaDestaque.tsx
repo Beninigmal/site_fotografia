@@ -45,10 +45,10 @@ export default function CampanhaDestaque({
             </div>
 
             <div className="absolute inset-0 flex flex-col justify-end items-center text-center p-6 pb-8 md:p-8 md:pb-12 z-10 bg-black bg-opacity-40 md:rounded-lg">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 sm:mb-4 text-white drop-shadow-lg">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2 sm:mb-4 text-white drop-shadow-lg font-cormorant italic font-light">
                 {campanha.titulo}
               </h1>
-              <div className="text-lg sm:text-xl lg:text-2xl text-white drop-shadow-lg max-w-md md:max-w-lg lg:max-w-2xl">
+              <div className="text-lg sm:text-xl lg:text-2xl text-white drop-shadow-lg max-w-md md:max-w-lg lg:max-w-2xl font-cormorant font-light">
                 {campanha.descricao?.map(
                   (block: ParagraphBlock, index: number) => (
                     <p key={index} className="mb-2 last:mb-0">

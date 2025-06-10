@@ -3,6 +3,13 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Rodape } from "./components/Rodape";
 import { WhatsAppFloatButton } from "./components/Contato/WhatsAppButton";
+import Navbar from "./components/Navbar";
+import { Playfair_Display } from "next/font/google";
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,9 +33,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`flex flex-col min-h-screen`}>
+      <body
+        className={`flex flex-col min-h-screen ${playfair.variable} font-sans`}
+      >
         <>
-          {children}
+          <Navbar />
+          <main className="flex-grow pt-16">{children}</main>
           <Rodape />
           <WhatsAppFloatButton />
         </>

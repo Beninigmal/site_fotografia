@@ -17,8 +17,6 @@ type RedeSocial = {
 const links: LinkItem[] = [
   { href: "/", label: "Início" },
   { href: "/sobre", label: "Sobre Mim" },
-  { href: "/portfolio", label: "Portfólio" },
-  { href: "/contato", label: "Contato" },
 ];
 
 const redesSociais: RedeSocial[] = [
@@ -69,8 +67,8 @@ export function Rodape() {
           <div>
             <h4 className="text-lg font-semibold mb-4">Contato</h4>
             <address className="not-italic text-gray-400 space-y-2">
-              <p>contato@fotografa.com</p>
-              <p>(71) 9 8149-1950</p>
+              <p>lianegomesfotografia@gmail.com</p>
+              <p>(71) 9 9691-2257</p>
             </address>
           </div>
 
