@@ -63,7 +63,7 @@ export function WorkCard({
         />
 
         {/* Overlay hover */}
-        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center">
+        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-end justify-center drop-shadow-md">
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: inView ? 1 : 0, y: inView ? 0 : 10 }}

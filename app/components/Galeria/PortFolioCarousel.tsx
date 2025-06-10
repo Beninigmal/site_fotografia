@@ -46,7 +46,7 @@ export function PortfolioCarousel({ items }: { items: PortfolioItem[] }) {
         }
         .slick-prev:before,
         .slick-next:before {
-          color: #4b5563; /* Cor cinza */
+          color: #992be2; /* Cor cinza */
           font-size: 40px;
         }
         .slick-prev {
