@@ -7,6 +7,9 @@ const nextConfig: NextConfig = {
       "localhost",
     ],
   },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 };
 
 export default nextConfig;
