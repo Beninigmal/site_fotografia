@@ -72,7 +72,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       <div
-        className={`md:hidden bg-rose-800/95 ${isOpen ? "block" : "hidden"}`}
+        className={`md:hidden bg-gray-900/100 ${isOpen ? "block" : "hidden"}`}
       >
         <div className="px-2 pt-2 pb-4 space-y-1">
           {links.map((link) => (
@@ -80,11 +80,7 @@ export default function Navbar() {
               key={link.path}
               href={link.path}
               onClick={() => setIsOpen(false)}
-              className={`${
-                pathname === link.path
-                  ? "bg-rose-900/50 text-white"
-                  : "text-rose-100 hover:bg-rose-900/30"
-              } 
+              className={`
                 block px-3 py-3 rounded-md text-lg font-medium`}
             >
               {link.label}
