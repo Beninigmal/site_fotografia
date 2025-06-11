@@ -25,7 +25,7 @@ const cardVariants = {
   visible: { opacity: 1, y: 0 },
 };
 
-const API_BASE_URL = process.env.STRAPI_API_URL || "http://localhost:1337";
+// const API_BASE_URL = process.env.STRAPI_API_URL || "http://localhost:1337";
 
 export function WorkCard({
   id,
@@ -81,7 +81,7 @@ export function WorkCard({
           {images.map((image, idx) => (
             <div key={idx} className="relative aspect-square">
               <Image
-                src={`${API_BASE_URL}${image.url}`}
+                src={image.url}
                 alt={image.alt}
                 fill
                 className="object-cover rounded"
