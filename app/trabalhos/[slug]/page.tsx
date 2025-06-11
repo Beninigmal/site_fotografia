@@ -9,12 +9,11 @@ type Trabalho = {
   }[];
 };
 
-const API_BASE_URL = process.env.STRAPI_API_URL || "http://localhost:1337";
+const API_BASE_URL = process.env.NEXT_PUBLIC_STRAPI_API_URL;
 
 async function getTrabalho(slug: string): Promise<Trabalho> {
   // URL correta para Strapi v3
   const url = `${API_BASE_URL}/api/trabalhos?filters[slug][$eq]=${slug}&populate=*`;
-  console.log("Fetching:", url);
 
   const res = await fetch(url);
 
@@ -24,7 +23,6 @@ async function getTrabalho(slug: string): Promise<Trabalho> {
   }
 
   const response = await res.json();
-  console.log("Resposta completa:", JSON.stringify(response, null, 2));
 
   // Verificação para Strapi v3 - formato { data: [], meta: {} }
   if (!response.data || !Array.isArray(response.data)) {
@@ -64,7 +62,6 @@ export default async function DetalheTrabalho({
 }) {
   try {
     const trabalho = await getTrabalho(params.slug);
-    console.log("Trabalho transformado:", trabalho);
 
     return (
       <>

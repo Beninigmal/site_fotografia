@@ -71,7 +71,6 @@ export default function GaleriaTrabalhos({
       {/* Grid de trabalhos */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {filteredWorks.map((work) => (
-          // console.log("Work item:", work["descricao"][0].children[0].text),
           <div
             key={work.id}
             className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow"
