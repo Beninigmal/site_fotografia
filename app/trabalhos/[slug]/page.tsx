@@ -9,6 +9,12 @@ type Trabalho = {
   }[];
 };
 
+interface PageProps {
+  params: {
+    slug: string;
+  };
+}
+
 const API_BASE_URL = process.env.NEXT_PUBLIC_STRAPI_API_URL;
 
 async function getTrabalho(slug: string): Promise<Trabalho> {
@@ -55,11 +61,7 @@ async function getTrabalho(slug: string): Promise<Trabalho> {
   };
 }
 
-export default async function DetalheTrabalho({
-  params,
-}: {
-  params: { slug: string };
-}) {
+export default async function DetalheTrabalho({ params }: PageProps) {
   try {
     const trabalho = await getTrabalho(params.slug);
 
