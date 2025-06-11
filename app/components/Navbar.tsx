@@ -22,7 +22,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex-shrink-0 flex items-center">
             <span className="text-3xl font-cormorant text-white italic font-light">
-              Liane Gomez Fotografia
+              Liane Gomes Fotografia
             </span>
           </Link>
 
