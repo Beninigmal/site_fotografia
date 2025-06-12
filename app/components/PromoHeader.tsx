@@ -26,6 +26,17 @@ export function PromoHeader() {
     },
   ];
 
+  const phoneNumber = "557181491950"; // Substitua pelo seu número
+  const whatsappMessage =
+    "Olá! Gostaria de mais informações sobre seu trabalho."; // Mensagem padrão opcional
+
+  // Gera o link universal para WhatsApp (funciona em mobile e web)
+  const getWhatsAppLink = () => {
+    return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      whatsappMessage
+    )}`;
+  };
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentPromo((prev) => (prev + 1) % promos.length);
@@ -84,6 +95,7 @@ export function PromoHeader() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className="px-6 py-2 bg-white text-gray-800 rounded-full font-medium shadow-lg"
+                  onClick={() => window.open(getWhatsAppLink(), "_blank")}
                 >
                   {promos[currentPromo].cta}
                 </motion.button>
